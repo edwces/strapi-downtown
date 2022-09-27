@@ -1,8 +1,18 @@
+interface ImageFormat {
+  url: string;
+}
+
 interface Image {
   id: number;
   attributes: {
-    label: string;
+    caption: string;
     url: string;
+    formats: {
+      small: ImageFormat;
+      medium: ImageFormat;
+      large: ImageFormat;
+      thumbnail: ImageFormat;
+    };
   };
 }
 

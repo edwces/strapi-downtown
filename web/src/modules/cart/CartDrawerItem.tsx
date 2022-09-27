@@ -7,15 +7,17 @@ interface CartDrawerItemProps {
   label: string;
   price: number;
   src: string;
+  alt?: string;
   quantity: number;
-  onIncrementQuantity: () => void;
-  onDecrementQuantity: () => void;
+  onIncrementQuantity?: () => void;
+  onDecrementQuantity?: () => void;
 }
 
 export const CartDrawerItem = ({
   label,
   price,
   src,
+  alt,
   quantity,
   onIncrementQuantity,
   onDecrementQuantity,
@@ -23,7 +25,7 @@ export const CartDrawerItem = ({
   return (
     <article>
       <div className="flex items-center">
-        <Image src={src} width={120} height={120} />
+        <Image src={src} width={120} height={120} alt={alt} />
         <div className="pl-4 flex-grow">
           <p className="text-lg ml-4">{label}</p>
           <div className="border-b-2 border-gray-400 my-4" />

@@ -17,8 +17,8 @@ export const ProductsList = ({
           <ProductItem
             label={product.attributes.label}
             price={product.attributes.price}
-            src={product.attributes.image.data.attributes.url}
-            alt={product.attributes.image.data.attributes.label}
+            src={product.attributes.image.data.attributes.formats.medium.url}
+            alt={product.attributes.image.data.attributes.caption}
             onAddToCart={() => onAddProductToCart(product.id)}
           />
         </li>

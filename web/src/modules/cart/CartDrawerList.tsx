@@ -21,7 +21,8 @@ export const CartDrawerList = ({
           <CartDrawerItem
             label={product.attributes.label}
             price={product.attributes.price}
-            src={product.attributes.image.data.attributes.url}
+            src={product.attributes.image.data.attributes.formats.small.url}
+            alt={product.attributes.image.data.attributes.caption}
             quantity={quantityFn(product.id)}
             onIncrementQuantity={() => onIncrementProductQuantity(product.id)}
             onDecrementQuantity={() => onDecrementProductQuantity(product.id)}
