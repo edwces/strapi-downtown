@@ -1,9 +1,5 @@
 import { useJSONStorage } from "../../../common/hooks/useJSONStorage";
-
-export interface CheckoutItem {
-  id: number;
-  quantity: number;
-}
+import { CheckoutItem } from "../cart.types";
 
 export const useLocalCart = () => {
   const [localCart, setLocalCart] = useJSONStorage({
